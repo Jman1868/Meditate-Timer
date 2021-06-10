@@ -1,0 +1,46 @@
+body{
+    background-color: #309b90;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.timerbody {
+
+  transition: background-color 0.5s ease;
+  background: #f6c51b;
+
+ /* SIZE */
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  color: black;
+
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  
+  margin: 10%;
+  box-shadow: 20px 10px 0px #000000;
+  
+}
+.timerbody:hover{
+  background-color: blueviolet;
+  
+}
+.test
+{
+  text-align: center;
+  color: aliceblue;
+  font-size: 50;
+}
+p{
+    font-family: sans-serif;
+}
