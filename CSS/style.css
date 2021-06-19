@@ -35,12 +35,13 @@ body{
   background-color: blueviolet;
   
 }
-.test
+.breathtext
 {
   text-align: center;
   color: aliceblue;
-  font-size: 50;
+  font-size: xx-large;
 }
 p{
     font-family: sans-serif;
+    
 }
