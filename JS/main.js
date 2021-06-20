@@ -5,6 +5,10 @@ var sec=59;
 
 var counter=0; //Used to switch back and forth 
 
+var lastClick = 0;
+var delay = 10000000;
+
+
 //Refrence to our html
 const button = document.querySelector('href')
 const mintext = document.getElementById("min");
@@ -13,15 +17,21 @@ const breathtext = document.getElementById("breath");
 
 //The Timer function calls set interval function for timedo and
 //textinstrcut. It also Intialzies the text.
-function timer(link)
+function timer()
 {
-   
-    timedo = setInterval(calcsec, 1000);
-    breathtext.textContent = "Breath in";
-    textinstruct = setInterval(changeText, 5000);
-    link.onclick = function (event) {
-        event.preventDefault();
+    //Added a delay to stop user from clicking multiple times
+    if (lastClick >= (Date.now() - delay))
+    {
+        return;
+
     }
+    lastClick = Date.now();
+   
+      
+       timedo = setInterval(calcsec, 1000);
+       breathtext.textContent = "Breath in";
+       textinstruct = setInterval(changeText, 5000);
+   
 }
 
 //Change text changes the text by switching on each set interval call.
