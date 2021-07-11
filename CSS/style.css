@@ -1,5 +1,5 @@
 body{
-    background-color: #309b90;
+    background-color: #2a9d8f;
 }
 .center{
     display: flex;
@@ -9,7 +9,7 @@ body{
 .timerbody {
 
   transition: background-color 0.5s ease;
-  background: #f6c51b;
+  background: #e9c46a;
 
  /* SIZE */
   width: 300px;
@@ -32,13 +32,13 @@ body{
   
 }
 .timerbody:hover{
-  background-color: blueviolet;
+  background-color: #e76f51;
   
 }
 .breathtext
 {
   text-align: center;
-  color: aliceblue;
+  color: whitesmoke;
   font-size: xx-large;
 }
 p{

@@ -8,7 +8,6 @@ let counter = 0; //Used to switch back and forth
 let lastClick = 0;
 let delay = 10000000;
 
-
 //Refrence to our html
 const button = document.querySelector('href')
 const mintext = document.getElementById("min");
@@ -18,18 +17,15 @@ const breathtext = document.getElementById("breath");
 //The Timer function calls set interval function for timedo and
 //textinstrcut. It also Intialzies the text.
 function timer() {
-    //Added a delay to stop user from clicking multiple times
+    // Delay to stop user from clicking multiple times
     if (lastClick >= (Date.now() - delay)) {
         return;
-
     }
     lastClick = Date.now();
-
 
     timedo = setInterval(calcsec, 1000);
     breathtext.textContent = "Breath in";
     textinstruct = setInterval(changeText, 5000);
-
 }
 
 //Change text changes the text by switching on each set interval call.
@@ -47,9 +43,9 @@ function changeText() {
     }
 }
 
-
-//Calcsec, calcualates the second that is left. If seconds is greater than zero
-//we subtract by 1. Otherwise we move on the the Calc Min.
+//Calcsec, calcualates the second that is left. This function
+// updates our text. If seconds is greater than zero
+//we subtract by 1. Otherwise we move on to Calc Min.
 function calcsec() {
     sectext.textContent = sec;
     mintext.textContent = min;
@@ -60,9 +56,7 @@ function calcsec() {
     else if (sec <= 0) {
         console.log("checking if min is 0")
         calcMin();
-
     }
-
 }
 
 //Caclcmin Calculates the minutes that are left.
@@ -76,7 +70,6 @@ function calcMin() {
     if (min > 0) {
         min -= 1;
         sec = 59;
-
     }
     else if (min <= 0) {
         console.log("Reached the end");
@@ -84,7 +77,6 @@ function calcMin() {
         clearInterval(textinstruct);
         return;
     }
-
 }
 
 
